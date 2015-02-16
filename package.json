@@ -1,0 +1,25 @@
+{
+  "name": "cssaudit",
+  "version": "0.0.0",
+  "description": "CSS Audit helps you find unused CSS selectors",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/jasmine test/unit --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dp-lewis/cssaudit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dp-lewis/cssaudit/issues"
+  },
+  "homepage": "https://github.com/dp-lewis/cssaudit",
+  "devDependencies": {
+    "phantomjs": "^1.9.15",
+    "q": "^1.1.2",
+    "xml2js": "^0.4.5",
+    "zlib": "^1.0.5"
+  }
+}
