@@ -4,7 +4,7 @@
   "description": "CSS Audit helps you find unused CSS selectors",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/jasmine test/unit --verbose"
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
