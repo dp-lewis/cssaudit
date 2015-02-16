@@ -17,8 +17,8 @@
   },
   "homepage": "https://github.com/dp-lewis/cssaudit",
   "devDependencies": {
-    "phantomjs": "^1.9.15",
     "q": "^1.1.2",
-    "xml2js": "^0.4.5"
+    "xml2js": "^0.4.5",
+    "phantom": "^0.7.2"
   }
 }
