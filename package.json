@@ -19,6 +19,7 @@
   "devDependencies": {
     "q": "^1.1.2",
     "xml2js": "^0.4.5",
-    "phantom": "^0.7.2"
+    "phantom": "^0.7.2",
+    "css": "^2.1.0"
   }
 }
