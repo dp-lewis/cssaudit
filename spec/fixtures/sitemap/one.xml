@@ -1,0 +1,13 @@
+
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="http://www.finder.com.au/wp-content/plugins/google-sitemap-generator/sitemap.xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>http://localhost/one</loc>
+	</url>
+	<url>
+		<loc>http://localhost/two</loc>
+	</url>
+	<url>
+		<loc>http://localhost/three</loc>
+	</url>
+</urlset>
