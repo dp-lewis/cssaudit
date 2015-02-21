@@ -33,7 +33,6 @@ describe('combineresults', function () {
     });
 
     combineresults.process(results).then(function (result) {
-      console.log(result);
       expect(typeof result).toBe('object');
       done();
     });
