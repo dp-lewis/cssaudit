@@ -1,8 +1,8 @@
 /*global describe, it*/
 var stylesheets, sitemaps, cssaudit = require('../lib/cssaudit.js');
 
-stylesheets = ['http://findercdn.com.au/static/1405/css/static.min.css'];
-sitemaps = ['http://www.finder.com.au/sitemap.xml'];
+stylesheets = ['http://www.david-lewis.com/wp-content/themes/davidlewis/style.css'];
+sitemaps = ['http://www.david-lewis.com/sitemap-posttype-post.xml'];
 
 
 describe('cssaudit', function () {
@@ -14,7 +14,7 @@ describe('cssaudit', function () {
       'output': './output/cssaudit.json'
     });
 
-    myaudit.run().then(function () {
+    myaudit.run().then(function (results) {
       done();
     });
 

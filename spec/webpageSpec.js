@@ -48,4 +48,29 @@ describe('webpage', function () {
       done();
     });
   });
+
+  it('should have access to data passed to it from the outside', function (done) {
+    var pagesToTest, testToRun, collectResult, options;
+
+    options = {
+      'testing': true
+    };
+
+    pagesToTest = ['http://www.google.com.au'];
+
+    testToRun = function (passedOptions) {
+      window.passedOptions = passedOptions;
+
+    };
+
+    collectResult = function () {
+      return window.passedOptions;
+    };
+
+    webpage.testPages(pagesToTest, testToRun, collectResult, options).then(function (results) {
+      expect(typeof results).toBe('object');
+      expect(results[0].testing).toBe(true);
+      done();
+    });
+  });
 });
