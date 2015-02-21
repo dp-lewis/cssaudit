@@ -4,14 +4,16 @@ var cssaudit = require('./lib/cssaudit'),
   myaudit;
 
 stylesheets = ['http://www.david-lewis.com/wp-content/themes/davidlewis/style.css'];
-sitemaps = ['http://www.david-lewis.com/sitemap-posttype-post.xml', 'http://www.david-lewis.com/sitemap-posttype-page.xml'];
+sitemaps = ['http://www.david-lewis.com/sitemap-posttype-post.xml'];
 
 myaudit = cssaudit.init({
   'stylesheets': stylesheets,
   'sitemaps': sitemaps,
-  'output': './output/david-lewis.json'
+  'output': './output/dpl.html'
 });
 
-myaudit.run().done(function (results) {
-	console.log('done');
+myaudit.run().done(function () {
+  console.log('done');
+}, function (err) {
+  console.log(err);
 });
