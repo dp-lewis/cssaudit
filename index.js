@@ -1,14 +1,17 @@
 var cssaudit = require('./lib/cssaudit'),
   stylesheets,
-  sitemaps;
+  sitemaps,
+  myaudit;
 
-stylesheets = ['http://findercdn.com.au/static/1405/css/static.min.css'];
-sitemaps = ['http://www.finder.com.au/sitemap.xml'];
+stylesheets = ['http://www.david-lewis.com/wp-content/themes/davidlewis/style.css'];
+sitemaps = ['http://www.david-lewis.com/sitemap-posttype-post.xml', 'http://www.david-lewis.com/sitemap-posttype-page.xml'];
 
-cssaudit.init({
+myaudit = cssaudit.init({
   'stylesheets': stylesheets,
   'sitemaps': sitemaps,
-  'output': './output/cssaudit.json'
-}).then(function (results) {
-  console.log(results);
+  'output': './output/david-lewis.json'
+});
+
+myaudit.run().done(function (results) {
+	console.log('done');
 });
