@@ -11,7 +11,7 @@ describe('cssaudit', function () {
     var myaudit = cssaudit.init({
       'stylesheets': stylesheets,
       'sitemaps': sitemaps,
-      'output': './output/cssaudit.json'
+      'output': './cssaudit.json'
     });
 
     myaudit.run().then(function (results) {
