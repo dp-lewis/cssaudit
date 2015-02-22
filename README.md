@@ -3,7 +3,11 @@
 # cssaudit
 CSS Audit helps identify unused selectors in your CSS
 
+## Example output
 
+CSS Audit outputs a HTML report, and example can be viewed here: http://dp-lewis.github.io/cssaudit/
+
+## How to use
 ```
 var cssaudit = require('./lib/cssaudit'),
   myaudit;
@@ -20,3 +24,4 @@ myaudit.run().done(function () {
   console.log(err);
 });
 ```
+
