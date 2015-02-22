@@ -15,7 +15,10 @@
 <body>
 	<h1>CSS Audit</h1>
 
-	<h2>{{file}}</h2>
+	<h2>Stylesheets audited</h2>
+	<ul>
+		{{#stylesheets}}<li>{{.}}</li>{{/stylesheets}}
+	</ul>
 
 	<p>Total selectors: {{totalSelectors}}</p>
 	<p>Total URLs: {{totalUrls}}</p>
@@ -23,12 +26,13 @@
 	<h3>Selector usage</h3>
 
 	<table>
-		<thead><tr><th>Selector</th><th>Uses</th></tr></thead>
+		<thead><tr><th>Selector</th><th>Uses</th><th>Stylesheet</th></tr></thead>
 		<tbody>
 		{{#results}}
 		<tr>
 			<td>{{selector}}</td>
 			<td><a href="#{{id}}">{{used}}</a></td>
+			<td>{{#stylesheets}}{{.}}{{/stylesheets}}</td>
 		</tr>
 		{{/results}}
 		</tbody>

@@ -31,13 +31,18 @@ nockCSS = nock('http://localhost:7701', {
   .times(1)
   .reply(200, function () {
     return fs.createReadStream(__dirname + '/fixtures/stylesheet1.css');
+  })
+  .get('/stylesheet2.css')
+  .times(1)
+  .reply(200, function () {
+    return fs.createReadStream(__dirname + '/fixtures/stylesheet2.css');
   });
 
 describe('cssaudit', function () {
 
   var server, stylesheets, sitemaps;
 
-  stylesheets = ['http://localhost:7701/stylesheet1.css'];
+  stylesheets = ['http://localhost:7701/stylesheet1.css', 'http://localhost:7701/stylesheet2.css'];
   sitemaps = ['http://localhost:7701/sitemap1.xml', 'http://localhost:7701/sitemap2.xml'];
 
 
