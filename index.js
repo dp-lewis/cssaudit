@@ -5,9 +5,9 @@ myaudit = cssaudit.init({
   'urls': ['http://www.david-lewis.com'],
   'stylesheets': ['http://www.david-lewis.com/wp-content/themes/davidlewis/style.css'],
   'sitemaps': ['http://www.david-lewis.com/sitemap-posttype-post.xml'],
+  //'template': './output/template.mustache',
   'output': './output/david-lewis',
-  'filename': 'myreport',
-  'template': './output/template.mustache'
+  'filename': 'myreport'
 });
 
 myaudit.run().done(function () {
