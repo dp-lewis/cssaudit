@@ -28,7 +28,7 @@ CSS Audit outputs a HTML report, and example can be viewed here: http://dp-lewis
 
 ## How to use
 ```
-var cssaudit = require('./lib/cssaudit'),
+var cssaudit = require('cssaudit'),
   myaudit;
 
 myaudit = cssaudit.init({
