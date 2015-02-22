@@ -5,6 +5,12 @@ CSS Audit helps identify unused selectors in your CSS. This is designed to help 
 
 This is especially useful on older websites where the original authors of the CSS are no longer available and you are faced with adding new features without knowing what is no longer needed.
 
+## Installing
+
+```
+npm install git+https://github.com/dp-lewis/cssaudit.git
+```
+
 ## How it works
 
 You provide CSS Audit with a stylesheet and a site map, it will then extract all the CSS selectors and check how many times they're used on each URL found in the sitemap.
