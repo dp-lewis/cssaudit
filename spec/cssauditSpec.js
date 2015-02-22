@@ -70,7 +70,7 @@ describe('cssaudit', function () {
     var myaudit = cssaudit.init({
       'stylesheets': stylesheets,
       'sitemaps': sitemaps,
-      'output': './output/cssaudithmmm.html'
+      'output': './output/cssaudittest'
     });
 
     myaudit.run().then(function (results) {

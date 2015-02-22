@@ -13,7 +13,7 @@ npm install git+https://github.com/dp-lewis/cssaudit.git
 
 ## How it works
 
-You provide CSS Audit with a stylesheet and a site map, it will then extract all the CSS selectors and check how many times they're used on each URL found in the sitemap.
+You provide CSS Audit with a stylesheet, a site map with URLs and/or an array of URLs, it will then extract all the CSS selectors from the stylesheet and check how many times they're used on each URL.
 
 The speed of the test is dependant on your internet connection, page requests are queued and executed in parallel with a maximum of 10 pages being requested at a time.
 
@@ -28,13 +28,15 @@ CSS Audit outputs a HTML report, and example can be viewed here: http://dp-lewis
 
 ## How to use
 ```
-var cssaudit = require('cssaudit'),
+var cssaudit = require('./lib/cssaudit'),
   myaudit;
 
 myaudit = cssaudit.init({
+  'urls': ['http://www.david-lewis.com'],
   'stylesheets': ['http://www.david-lewis.com/wp-content/themes/davidlewis/style.css'],
   'sitemaps': ['http://www.david-lewis.com/sitemap-posttype-post.xml'],
-  'output': './output/david-lewis.html'
+  'output': './output/david-lewis',
+  'filename': 'myreport'
 });
 
 myaudit.run().done(function () {
@@ -42,4 +44,5 @@ myaudit.run().done(function () {
 }, function (err) {
   console.log(err);
 });
+
 ```
