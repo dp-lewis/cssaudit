@@ -5,7 +5,8 @@ var stylesheets,
   http = require('http'),
   fs = require('fs'),
   nock = require('nock'),
-  nockSitemaps;
+  nockSitemaps,
+  nockCSS;
 
 nockSitemaps = nock('http://localhost:7701', {
   reqheaders: {
@@ -17,11 +18,21 @@ nockSitemaps = nock('http://localhost:7701', {
     return fs.createReadStream(__dirname + '/fixtures/sitemap1.xml');
   });
 
+nockCSS = nock('http://localhost:7701', {
+  reqheaders: {
+    'Content-Type': 'text/css'
+  }
+}).get('/stylesheet1.css')
+  .times(1)
+  .reply(200, function () {
+    return fs.createReadStream(__dirname + '/fixtures/stylesheet1.css');
+  });
+
 describe('cssaudit', function () {
 
   var server, stylesheets, sitemaps;
 
-  stylesheets = ['http://www.david-lewis.com/wp-content/themes/davidlewis/style.css'];
+  stylesheets = ['http://localhost:7701/stylesheet1.css'];
   sitemaps = ['http://localhost:7701/sitemap1.xml'];
 
 
