@@ -16,7 +16,7 @@
     "url": "https://github.com/dp-lewis/cssaudit/issues"
   },
   "homepage": "https://github.com/dp-lewis/cssaudit",
-  "devDependencies": {
+  "dependencies": {
     "q": "^1.1.2",
     "xml2js": "^0.4.5",
     "phantom": "^0.7.2",
