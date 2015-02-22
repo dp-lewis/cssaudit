@@ -2,7 +2,7 @@
   "name": "cssaudit",
   "version": "0.0.0",
   "description": "CSS Audit helps you find unused CSS selectors",
-  "main": "index.js",
+  "main": "./lib/cssaudit.js",
   "scripts": {
     "test": "./node_modules/.bin/jasmine"
   },
@@ -10,8 +10,8 @@
     "type": "git",
     "url": "https://github.com/dp-lewis/cssaudit.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "David Lewis",
+  "license": "LICENSE-MIT",
   "bugs": {
     "url": "https://github.com/dp-lewis/cssaudit/issues"
   },
