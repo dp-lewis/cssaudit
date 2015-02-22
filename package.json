@@ -23,6 +23,7 @@
     "css": "^2.1.0",
     "promise-queue": "^2.1.1",
     "madlib-promise-queue": "^0.1.6",
-    "mustache": "^1.1.0"
+    "mustache": "^1.1.0",
+    "fs-extra": "^0.16.3"
   }
 }
