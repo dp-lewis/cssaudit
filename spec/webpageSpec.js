@@ -1,14 +1,37 @@
-/*global window, expect, describe, it, jasmine*/
+/*global window, expect, describe, it, jasmine, afterEach, beforeEach*/
 
-var webpage = require('../lib/webpage.js');
+var webpage = require('../lib/webpage.js'),
+  fs = require('fs'),
+  http = require('http');
 
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 600000;
 
 describe('webpage', function () {
+  var server;
+
+  beforeEach(function (done) {
+    // set up fake server to soak up request
+    fs.readFile(__dirname + '/fixtures/index.html', function (err, data) {
+      /*jslint unparam: true*/
+      server = http.createServer(function (req, res) {
+        res.writeHead(200, {'Content-Type': 'text/html'});
+        res.end(data);
+      }).listen(7701);
+
+      done();
+    });
+  });
+
+  afterEach(function () {
+    // tear down server
+    server.close();
+  });
+
+
   it('should do its shit', function (done) {
     var pagesToTest, testToRun;
 
-    pagesToTest = ['http://www.google.com.au', 'http://www.david-lewis.com'];
+    pagesToTest = ['http://locahost:7701/one.html', 'http://localhost:7701/two.html'];
 
     testToRun = function () {
       return 'it certainly did';
@@ -29,7 +52,7 @@ describe('webpage', function () {
       'testing': true
     };
 
-    pagesToTest = ['http://www.google.com.au'];
+    pagesToTest = ['http://locahost:7701/one.html'];
 
     testToRun = function (passedOptions) {
       return passedOptions;
