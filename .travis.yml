@@ -1,6 +1,4 @@
 language: node_js
-before_script:
-  - npm install jasmine -g
 cache:
   directories:
     - node_modules

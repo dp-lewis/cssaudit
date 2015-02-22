@@ -4,7 +4,7 @@
   "description": "CSS Audit helps you find unused CSS selectors",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine"
+    "test": "./node_modules/.bin/jasmine"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
     "promise-queue": "^2.1.1",
     "madlib-promise-queue": "^0.1.6",
     "mustache": "^1.1.0",
-    "fs-extra": "^0.16.3"
+    "fs-extra": "^0.16.3",
+    "jasmine": "^2.2.1"
   }
 }
