@@ -1,6 +1,6 @@
 {
   "name": "cssaudit",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "CSS Audit helps you find unused CSS selectors",
   "main": "./lib/cssaudit.js",
   "scripts": {
