@@ -24,7 +24,10 @@ The selectors are tested on page load, so any CSS selectors that are used follow
 
 ## Example output
 
-CSS Audit outputs a HTML report, and example can be viewed here: http://dp-lewis.github.io/cssaudit/
+CSS Audit outputs a HTML report and a JSON file. For example
+
+* http://dp-lewis.github.io/cssaudit/
+* http://dp-lewis.github.io/cssaudit/example.json
 
 ## How to use
 ```
