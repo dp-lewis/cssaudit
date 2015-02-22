@@ -16,6 +16,11 @@ nockSitemaps = nock('http://localhost:7701', {
   .times(1)
   .reply(200, function () {
     return fs.createReadStream(__dirname + '/fixtures/sitemap1.xml');
+  })
+  .get('/sitemap2.xml')
+  .times(1)
+  .reply(200, function () {
+    return fs.createReadStream(__dirname + '/fixtures/sitemap2.xml');
   });
 
 nockCSS = nock('http://localhost:7701', {
@@ -33,7 +38,7 @@ describe('cssaudit', function () {
   var server, stylesheets, sitemaps;
 
   stylesheets = ['http://localhost:7701/stylesheet1.css'];
-  sitemaps = ['http://localhost:7701/sitemap1.xml'];
+  sitemaps = ['http://localhost:7701/sitemap1.xml', 'http://localhost:7701/sitemap2.xml'];
 
 
   beforeEach(function (done) {
