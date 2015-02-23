@@ -128,12 +128,13 @@ table th.sort-up:after {
 	<h2>Selector usage</h2>
 
 	<table id="audit-table">
-		<thead><tr><th>Selector</th><th>Uses</th><th>Example URL</th><th>Stylesheet</th></tr></thead>
+		<thead><tr><th>Selector</th><th>Uses</th><th>URLs</th><th>Example URL</th><th>Stylesheet</th></tr></thead>
 		<tbody>
 		{{#results}}
 		<tr>
 			<td>{{selector}}</td>
 			<td>{{used}}</td>
+			<td>{{totalUrls}}</td>
 			<td><a href="{{exampleUrl}}">{{exampleUrl}}</a></td>
 			<td>{{#stylesheets}}{{.}}{{/stylesheets}}</td>
 		</tr>
