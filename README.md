@@ -30,6 +30,16 @@ CSS Audit outputs a HTML report and a JSON file. For example
 * http://dp-lewis.github.io/cssaudit/example.json
 
 ## How to use
+
+### Options
+
+* `stylesheets` - Required Array - stylesheets you want to audit
+* `sitemaps` - Required Array - sitemaps to gather URLs from
+* `urls` - Optional Array - URLs you want in addition to sitemap URLs
+* `output` - Optional String (default: './output') - path to the directory to output the report
+* `filename` - Optional String (default: 'cssaudit') - name of the report files
+* `template` - Optional String - path to a custom mustache template 
+
 ```
 var cssaudit = require('cssaudit'),
   myaudit;
