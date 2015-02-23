@@ -23,16 +23,17 @@
   ],
   "homepage": "https://github.com/dp-lewis/cssaudit",
   "dependencies": {
-    "q": "^1.1.2",
-    "xml2js": "^0.4.5",
-    "phantom": "^0.7.2",
     "css": "^2.1.0",
+    "cssbeautify": "^0.3.1",
+    "fs-extra": "^0.16.3",
     "madlib-promise-queue": "^0.1.6",
     "mustache": "^1.1.0",
-    "fs-extra": "^0.16.3",
-    "jasmine": "^2.2.1"
+    "phantom": "^0.7.2",
+    "q": "^1.1.2",
+    "xml2js": "^0.4.5"
   },
   "devDependencies": {
+    "jasmine": "^2.2.1",
     "nock": "^0.59.1"
   }
 }

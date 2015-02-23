@@ -128,19 +128,28 @@ table th.sort-up:after {
 	<h2>Selector usage</h2>
 
 	<table id="audit-table">
-		<thead><tr><th>Selector</th><th>Uses</th><th>Example URL</th><th>Stylesheet</th></tr></thead>
+		<thead><tr><th>Selector</th><th>Uses</th><th>Stylesheet</th></tr></thead>
 		<tbody>
 		{{#results}}
 		<tr>
 			<td>{{selector}}</td>
 			<td>{{used}}</td>
-			<td><a href="{{exampleUrl}}">{{exampleUrl}}</a></td>
 			<td>{{#stylesheets}}{{.}}{{/stylesheets}}</td>
 		</tr>
 		{{/results}}
 		</tbody>
 	</table>
 
+	<h2>Page usage</h2>
+
+	{{#results}}
+		<h3 id="{{id}}">Pages where <code>{{selector}}</code> was used</h3>
+		<ul>
+			{{#urls}}
+			<li><a href="{{.}}">{{.}}</a></li>
+			{{/urls}}
+		</ul>
+	{{/results}}
 <script>
 /*!
  * tablesort v2.2.5 (2015-02-09)
