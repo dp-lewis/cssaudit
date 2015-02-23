@@ -39,6 +39,8 @@ CSS Audit outputs a HTML report and a JSON file. For example
 * `output` - Optional String (default: './output') - path to the directory to output the report
 * `filename` - Optional String (default: 'cssaudit') - name of the report files
 * `template` - Optional String - path to a custom mustache template 
+* `queueSize` - Optional Integer (default: 10) - Amount of PhantomJS instances to run in parallel 
+* `sampleRun` - Optional Bool (default: false) - When true it will run the audit on 5 URLs
 
 ```
 var cssaudit = require('cssaudit'),
