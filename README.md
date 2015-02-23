@@ -8,7 +8,7 @@ This is especially useful on older websites where the original authors of the CS
 ## Installing
 
 ```
-npm install git+https://github.com/dp-lewis/cssaudit.git
+npm install cssaudit
 ```
 
 ## How it works
