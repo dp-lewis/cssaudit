@@ -37,7 +37,7 @@ describe('webpage', function () {
       return 'it certainly did';
     };
 
-    webpage.testPages(pagesToTest, testToRun).then(function (results) {
+    webpage.testPages(pagesToTest, testToRun, {}).then(function (results) {
       expect(typeof results).toBe('object');
       expect(results.length).toBe(2);
       expect(results[0]).toBe('it certainly did');
