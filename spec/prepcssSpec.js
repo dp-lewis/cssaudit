@@ -4,11 +4,7 @@ var prepcss = require('../lib/prepcss'),
   nock = require('nock'),
   nockCSS;
 
-nockCSS = nock('http://localhost', {
-  reqheaders: {
-    'Content-Type': 'text/css'
-  }
-}).get('/stylesheet1.css')
+nockCSS = nock('http://localhost').get('/stylesheet1.css')
   .times(2)
   .reply(200, function () {
     return fs.createReadStream(__dirname + '/fixtures/stylesheet1.css');

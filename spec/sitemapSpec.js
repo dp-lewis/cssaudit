@@ -4,11 +4,7 @@ var sitemap = require('../lib/sitemap.js'),
   nock = require('nock'),
   nockSitemaps;
 
-nockSitemaps = nock('http://localhost', {
-  reqheaders: {
-    'Content-Type': 'text/xml'
-  }
-}).get('/sitemap1.xml')
+nockSitemaps = nock('http://localhost').get('/sitemap1.xml')
   .times(2)
   .reply(200, function () {
     return fs.createReadStream(__dirname + '/fixtures/sitemap1.xml');

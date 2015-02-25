@@ -8,11 +8,7 @@ var stylesheets,
   nockSitemaps,
   nockCSS;
 
-nockSitemaps = nock('http://localhost:7701', {
-  reqheaders: {
-    'Content-Type': 'text/xml'
-  }
-}).get('/sitemap1.xml')
+nockSitemaps = nock('http://localhost:7701').get('/sitemap1.xml')
   .times(1)
   .reply(200, function () {
     return fs.createReadStream(__dirname + '/fixtures/sitemap1.xml');
@@ -23,11 +19,7 @@ nockSitemaps = nock('http://localhost:7701', {
     return fs.createReadStream(__dirname + '/fixtures/sitemap2.xml');
   });
 
-nockCSS = nock('http://localhost:7701', {
-  reqheaders: {
-    'Content-Type': 'text/css'
-  }
-}).get('/stylesheet1.css')
+nockCSS = nock('http://localhost:7701').get('/stylesheet1.css')
   .times(1)
   .reply(200, function () {
     return fs.createReadStream(__dirname + '/fixtures/stylesheet1.css');
@@ -73,7 +65,7 @@ describe('cssaudit', function () {
       'output': './output/cssaudittest'
     });
 
-    myaudit.run().then(function (results) {
+    myaudit.run().done(function (results) {
       done();
     });
 
