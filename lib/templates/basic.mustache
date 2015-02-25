@@ -112,6 +112,15 @@ table th.sort-up:after {
 	margin-top: 1rem;
 }
 
+:target {
+	background: #e18728 !important;
+	color: white;
+}
+
+:target a {
+	color: white;
+}
+
 	</style>
 </head>
 <body>
@@ -131,8 +140,8 @@ table th.sort-up:after {
 		<thead><tr><th>Selector</th><th>Uses</th><th>URLs</th><th>Example URL</th><th>Stylesheet</th></tr></thead>
 		<tbody>
 		{{#results}}
-		<tr>
-			<td>{{selector}}</td>
+		<tr id="selector-{{id}}">
+			<td><a href="#selector-{{id}}">{{selector}}</a></td>
 			<td>{{used}}</td>
 			<td>{{totalUrls}}</td>
 			<td><a href="{{exampleUrl}}">{{exampleUrl}}</a></td>
@@ -141,6 +150,13 @@ table th.sort-up:after {
 		{{/results}}
 		</tbody>
 	</table>
+
+	<h2>URLs checked</h2>
+	<ol>
+	{{#urls}}
+	<li><a href="{{.}}">{{.}}</a></li>
+	{{/urls}}
+	</ol>
 
 <script>
 /*!
