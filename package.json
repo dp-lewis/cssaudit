@@ -34,7 +34,7 @@
     "promise-queue": "^2.1.1"
   },
   "devDependencies": {
-    "jasmine": "^2.2.1",
-    "nock": "^0.59.1"
+    "jasmine": "2.99.0",
+    "nock": "0.59.1"
   }
 }
