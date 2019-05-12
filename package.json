@@ -25,7 +25,7 @@
   "dependencies": {
     "css": "^2.1.0",
     "cssbeautify": "^0.3.1",
-    "fs-extra": "^0.16.3",
+    "fs-extra": "^8.0.0",
     "mustache": "^1.1.0",
     "phantom": "^0.7.2",
     "q": "^1.1.2",
